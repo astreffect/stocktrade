@@ -33,10 +33,7 @@ app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, cors_allowed_origins="*")  # Allow connections from any origin
 def get_db_connection():
     return mysql.connector.connect(
-        host='localhost',
-        user='ny',
-        password='abcdZ@123',
-        database='trading'
+
     )
 def get_token_by_symbol3(symbol):
     # Load CSV data into a DataFrame
@@ -233,13 +230,7 @@ def check_and_sell_orders():
     print(open_orders)
 
     api = ShoonyaApiPy()
-    user = "FA122220"
-    pwd = "Monish@11"
-    factor2 = "239952"
-    vc = "FA122220_U"
-    app_key = "865083c85467852a527e1f0b3fd22896"
-    imei = "abc1234"
-    TOKEN = 'EI5AJJ47S2V2HP2URRK65427GBL4Z62N'
+
     otp = pyotp.TOTP(TOKEN).now()
 
     api.login(userid=user, password=pwd, twoFA=otp, vendor_code=vc, api_secret=app_key, imei=imei)
@@ -299,13 +290,7 @@ def trigger_rollover():
         cur.close()
 
         api = ShoonyaApiPy()
-        user = "FA122220"
-        pwd = "Monish@11"
-        factor2 = "239952"
-        vc = "FA122220_U"
-        app_key = "865083c85467852a527e1f0b3fd22896"
-        imei = "abc1234"
-        TOKEN = 'EI5AJJ47S2V2HP2URRK65427GBL4Z62N'
+
         otp = pyotp.TOTP(TOKEN).now()
 
         api.login(userid=user, password=pwd, twoFA=otp, vendor_code=vc, api_secret=app_key, imei=imei)
@@ -751,13 +736,7 @@ def dashboard():
     
     # Define the API
     api = ShoonyaApiPy()
-    user = "FA122220"
-    pwd = "Monish@11"
-    factor2 = "239952"
-    vc = "FA122220_U"
-    app_key = "865083c85467852a527e1f0b3fd22896"
-    imei = "abc1234"
-    TOKEN = 'EI5AJJ47S2V2HP2URRK65427GBL4Z62N'
+
     otp = pyotp.TOTP(TOKEN).now()
 
     api.login(userid=user, password=pwd, twoFA=otp, vendor_code=vc, api_secret=app_key, imei=imei)
