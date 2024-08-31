@@ -234,8 +234,8 @@ contract_type = 'FUT'
 token = create_token(symbol, current_date, contract_type)
 security_id = get_security_id(scrip_master, token)
 sid = str(security_id)
-client_id = "1000481653"
-access_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJkaGFuIiwicGFydG5lcklkIjoiIiwiZXhwIjoxNzI0ODE0OTA2LCJ0b2tlbkNvbnN1bWVyVHlwZSI6IlNFTEYiLCJ3ZWJob29rVXJsIjoiIiwiZGhhbkNsaWVudElkIjoiMTAwMDQ4MTY1MyJ9.TqS-Abarn1Z0X3Z6Z1voLH5k--9JICJ4Co8hVjBiTDjgyx1fa2zQaZcDt3Th0u2bEYFnB8NMLE_k3zdFecfkPA"
+client_id = ""
+access_token = "..TqS-Abarn1Z0X3Z6Z1voLH5k--"
 
 
 print(f"Token: {token}")
